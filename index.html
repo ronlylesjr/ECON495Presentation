@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>ECON495 Presentation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,14 +24,67 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Calculating the Probablility of an Online Sale Using the Logit Model
-           <br /> <br />
-           
-           <h5>Ron Lyles Jr</h5>
+				<section>
+                <h3>Calculating the Probablility of an Online Sale Using the
+                Logit Model</h3>  
+                <small>Ron Lyles Jr
+                <br />ECON 495
+                <br />Fall 2018
+                
+                </small>
                 
                 
                 </section>
-				<section>Slide 2</section>
+                
+				<section><h3>Overview:</h3>
+                <br />
+                <ul>
+                <li>Log of web traffic to Google's Merch store</li>
+                <li>September 2016-January 2017</li>
+                <li>903,653 observations</li>
+
+                </ul>               
+                
+                </section>
+
+                <section>
+                <h3>Methodology:</h3>
+                <ul>
+                <li>Three categories of factors:
+                <ul>
+                <li>Location</li>
+                <li>Marketing</li>
+                <li>User</li>
+                </ul>
+                </li>
+                <li>For each category, choose factors that represent at least 1% of total visits</li>
+                <li>Total for named categories should be at least 90%</li>
+                
+                </ul>
+                
+                
+                
+                
+                </section>
+                <section>
+                <h3>Location</h3>
+          <div> <canvas data-chart="bar">
+        SubContinent, 'Australasia', 'Central_America', 'Eastern_Asia','Eastern_Europe', 'Northern_America', 'Northern_Europe','South_America', 'Southeast_Asia', 'Southern_Asia', 'Southern_Europe', 'Western_Asia', 'Western_Europe', 'other'
+       Total Visits, 14893, 15583, 46919, 45249, 390657, 58168, 41731, 77800, 59321, 35780, 38443, 59114, 19995
+       Purchases, 14, 26, 59, 14, 11143, 27, 98, 32, 11, 8, 21, 30, 32 <!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :
+        "#ED872D"}]
+        }
+        
+        }
+        -->
+
+
+                                                 </canvas></div>
+                
+                </section>
+                <section> <h3>Marketing</h3> </section>
 			</div>
 		</div>
 
@@ -44,6 +97,8 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				dependencies: [
+                    { src: 'plugin/chart/chart.min.js' },
+                    { src: 'plugin/chart/csv2chart.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
