@@ -35,21 +35,43 @@
                 
                 
                 </section>
-                
 				<section><h3>Overview:</h3>
-                <br />
                 <ul>
+
                 <li>Log of web traffic to Google's Merch store</li>
                 <li>September 2016-January 2017</li>
                 <li>903,653 observations</li>
+                <li>Goal: Find impact of different factors on likelihood of making a purchase</li>
 
                 </ul>               
                 
                 </section>
+                <section><h3>Prior Work</h3>
+                <ul> 
+                
+                <li><a
+                href="https://pdfs.semanticscholar.org/acc8/77ab30dd5e4f1292c81934d561c032defd0a.pdf">"Determinants
+                of Recent Online Purchasing and the Percentage of Income spent online"</a>
+                <ul><li>Hannah & Lybecker, 2010. Internation Business
+                Research</li></ul>
+                </li>
+                
 
-                <section>
-                <h3>Methodology:</h3>
+                <li>
+                <a
+                href="http://www.jecr.org/sites/default/files/08_1_p04.pdf">Online
+                Shopping Acceptance Model — A Critical Survey of Consumer
+                Factors in Online Shopping</a>
+                <ul><li>Zhou, Dai, & Zhang, 2007. Journal of Electronic Commerce
+                Research</li></ul>
+                </li>
+                </ul>
+                
+                </section>
+                <section><h3>Models</h3>
                 <ul>
+                <li>Several logit models</li>
+                <li>Dependent variable: whether or not visitor made a purchase</li>
                 <li>Three categories of factors:
                 <ul>
                 <li>Location</li>
@@ -57,6 +79,12 @@
                 <li>User</li>
                 </ul>
                 </li>
+                
+                </ul>
+                </section>
+                <section>
+                <h3>Methodology:</h3>
+                <ul>
                 <li>For each category, choose factors that represent at least 1% of total visits</li>
                 <li>Total for named categories should be at least 90%</li>
                 
@@ -67,16 +95,16 @@
                 
                 </section>
                 <section>
-                <h3>Location</h3>
-          <div> <canvas data-chart="bar">
-        SubContinent, 'Australasia', 'Central_America', 'Eastern_Asia','Eastern_Europe', 'Northern_America', 'Northern_Europe','South_America', 'Southeast_Asia', 'Southern_Asia', 'Southern_Europe', 'Western_Asia', 'Western_Europe', 'other'
+                <h4>Descriptive Statistics - Location</h4>
+
+                <small class="fragment fade-out">Visits for named regions constitue 97.79% of all visits</small>
+          <div> <canvas class="fragment grow" data-chart="bar">
+        SubContinent, Australasia, Central America, Eastern Asia,Eastern Europe, Northern America, Northern Europe,South America, Southeast Asia, Southern Asia, Southern Europe, Western Asia, Western Europe, other
        Total Visits, 14893, 15583, 46919, 45249, 390657, 58168, 41731, 77800, 59321, 35780, 38443, 59114, 19995
        Purchases, 14, 26, 59, 14, 11143, 27, 98, 32, 11, 8, 21, 30, 32 <!--
         {"data" : {
-        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :
-        "#ED872D"}]
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
         }
-        
         }
         -->
 
@@ -84,7 +112,62 @@
                                                  </canvas></div>
                 
                 </section>
-                <section> <h3>Marketing</h3> </section>
+                <section> <h3>Descriptive Statistics - Marketing</h3> 
+                <ul>
+                
+                <li>Source - Specific origin of web traffic eg 'google' or 'domain.com'</li>
+                <li>Medium - Category of the source eg 'organic' or 'referral'</li>
+                <li>Campaign - Name of a specific online campaign</li>
+                
+                </ul>
+                
+                </section>
+
+
+                <section> 
+                <h4>Descriptive Statistics - Source</h4>
+                <small class="fragment fade-out">Visits for named categories constitue 94.66% of all visits</small>
+          <div> <canvas class="fragment grow" data-chart="bar">
+     direct, Partners, analytics.google.com, google, mall.googleplex.com, youtube.com, other 
+       Total Visits, 143028, 16411, 16172, 400788, 66416, 212602, 48236 
+       Purchases, 2042, 9, 0, 3879, 5103, 11, 471 <!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
+        }, 
+        "options": { "responsive": true}
+        }
+        -->
+
+
+                                                 </canvas></div>
+                 
+                
+                
+                </section>
+
+                <section> 
+                <h4>Descriptive Statistics - Medium</h4>
+                <small class="fragment fade-out">Visits for named categories constitue 99.29% of all visits</small>
+          <div> <canvas class="fragment grow" data-chart="bar">
+         ,none, affiliate, cpc, organic, referral, other
+       Total Visits, 143026, 16403, 25326, 381561, 330955, 6382
+       Purchases, 2042, 9, 468, 3438, 5415, 143  <!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
+        }, 
+        "options": { "responsive": true}
+        }
+        -->
+
+
+                                                 </canvas></div>
+                 
+                
+                
+                </section>
+
+
+
 			</div>
 		</div>
 
@@ -103,8 +186,32 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
+				],
+
+                chart: { 
+                    defaults:{
+                    global: {
+                    
+                    legend: { labels: {fontColor: "#FFFFFF", fontSize: 16}},
+                    tooltips: { titleFontSize: 14, bodyFontSize: 14}
+                    },
+                    scale: { 
+                
+                        scaleLabel: { fontColor: "#FFFFFF"},
+                        ticks: {fontColor: "#FFFFFF", fontSize: 12},
+                        gridLines: {display: false}
+                        }
+                }
+                }
+                
+                
+                }
+
+
+
+			
+            
+            );
 		</script>
 	</body>
 </html>
