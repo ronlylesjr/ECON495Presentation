@@ -35,11 +35,12 @@
                 
                 
                 </section>
+                <section data-background="imgs/gstore.png"></section>
 				<section><h3>Overview:</h3>
                 <ul>
 
                 <li>Log of web traffic to Google's Merch store</li>
-                <li>September 2016-January 2017</li>
+                <li>September 2016 - January 2017</li>
                 <li>903,653 observations</li>
                 <li>Goal: Find impact of different factors on likelihood of making a purchase</li>
 
@@ -59,9 +60,9 @@
 
                 <li>
                 <a
-                href="http://www.jecr.org/sites/default/files/08_1_p04.pdf">Online
+                href="http://www.jecr.org/sites/default/files/08_1_p04.pdf">"Online
                 Shopping Acceptance Model — A Critical Survey of Consumer
-                Factors in Online Shopping</a>
+                Factors in Online Shopping" (2007)</a>
                 <ul><li>Zhou, Dai, & Zhang, 2007. Journal of Electronic Commerce
                 Research</li></ul>
                 </li>
@@ -70,8 +71,9 @@
                 </section>
                 <section><h3>Models</h3>
                 <ul>
-                <li>Several logit models</li>
+                <li>Logit model for each factor</li>
                 <li>Dependent variable: whether or not visitor made a purchase</li>
+                <li>Marginal effects will be reported</li>
                 <li>Three categories of factors:
                 <ul>
                 <li>Location</li>
@@ -85,8 +87,17 @@
                 <section>
                 <h3>Methodology:</h3>
                 <ul>
-                <li>For each category, choose factors that represent at least 1% of total visits</li>
-                <li>Total for named categories should be at least 90%</li>
+                <li>For each category, choose factors that have at least 10
+                sales</li>
+                <li><a
+                href="https://pdfs.semanticscholar.org/15f3/7ff89f68747a3f4cb34cb6097ba79b201f92.pdf">"A
+                Simulation Study of the Number of Events per Variable in
+                Logistic Regression Analysis" 
+                Pedduzi et. all (1996)</a></li>
+                <li><a
+                href="https://academic.oup.com/aje/article/165/6/710/63906">"Relaxing
+                the Rule of Ten Events per Variable in Logistic and Cox
+                Regression" Vittinghoff and McCulloch (2007)</a></li>
                 
                 </ul>
                 
@@ -95,13 +106,12 @@
                 
                 </section>
                 <section>
-                <h4>Descriptive Statistics - Location</h4>
+                <h4 class="fragment fade-out">Descriptive Statistics - Location</h4>
 
-                <small class="fragment fade-out">Visits for named regions constitue 97.79% of all visits</small>
           <div> <canvas class="fragment grow" data-chart="bar">
-        SubContinent, Australasia, Central America, Eastern Asia,Eastern Europe, Northern America, Northern Europe,South America, Southeast Asia, Southern Asia, Southern Europe, Western Asia, Western Europe, other
-       Total Visits, 14893, 15583, 46919, 45249, 390657, 58168, 41731, 77800, 59321, 35780, 38443, 59114, 19995
-       Purchases, 14, 26, 59, 14, 11143, 27, 98, 32, 11, 8, 21, 30, 32 <!--
+        SubContinent,Australasia, Caribbean, Central_America, Eastern_Asia, Eastern_Europe, Northern_America, Northern_Europe, South_America, Southeast_Asia, Southern_Asia, Western_Asia, Western_Europe, other
+       Total Visits,14893, 2406, 15583, 46919, 45249, 390657, 58168, 41731, 77800, 59321, 38443, 59114, 53369 
+       Purchases, 14, 16, 26, 59, 14, 11143, 27, 98, 32, 11, 21, 30, 24 <!--
         {"data" : {
         "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
         }
@@ -110,6 +120,7 @@
 
 
                                                  </canvas></div>
+                
                 
                 </section>
                 <section> <h3>Descriptive Statistics - Marketing</h3> 
@@ -117,7 +128,6 @@
                 
                 <li>Source - Specific origin of web traffic eg 'google' or 'domain.com'</li>
                 <li>Medium - Category of the source eg 'organic' or 'referral'</li>
-                <li>Campaign - Name of a specific online campaign</li>
                 
                 </ul>
                 
@@ -125,16 +135,15 @@
 
 
                 <section> 
-                <h4>Descriptive Statistics - Source</h4>
-                <small class="fragment fade-out">Visits for named categories constitue 94.66% of all visits</small>
+                <h4 class="fragment fade-out">Descriptive Statistics - Source</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
-    Source, direct, Partners, analytics.google.com, google, mall.googleplex.com, youtube.com, other 
-       Total Visits, 143028, 16411, 16172, 400788, 66416, 212602, 48236 
-       Purchases, 2042, 9, 0, 3879, 5103, 11, 471 <!--
+    Source, direct, bing, dealspotrcom, dfa, facebookcom, gdealsgoogleplexcom, google, groupsgooglecom, lfacebookcom, mailgooglecom, mallgoogleplexcom, sitesgooglecom, yahoo, youtubecom, other 
+       Total Visits, 143028, 1530, 528, 5686, 2296, 1063, 400788, 1025, 795, 1457, 66416, 2983, 1480, 212602, 61976 
+       Purchases, 2042, 21, 40, 123, 20, 18, 3879, 38, 13, 62, 5103, 42, 22, 11, 81<!--
         {"data" : {
         "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
         }, 
-        "options": { "responsive": true}
+        "options": { "responsive": true, "scales": { "xAxes": [{ "ticks": { "autoSkip": false}}]  }}
         }
         -->
 
@@ -146,22 +155,79 @@
                 </section>
 
                 <section> 
-                <h4>Descriptive Statistics - Medium</h4>
-                <small class="fragment fade-out">Visits for named categories constitue 99.29% of all visits</small>
+                <h4 class="fragment fade-out">Descriptive Statistics - Medium</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
-        Medium,none, affiliate, cpc, organic, referral, other
-       Total Visits, 143026, 16403, 25326, 381561, 330955, 6382
-       Purchases, 2042, 9, 468, 3438, 5415, 143  <!--
+        Medium, none, cpc, cpm, organic, referral, other
+       Total Visits, 143026, 25326, 6262, 381561, 330955, 16523 
+       Purchases, 2042, 468, 142, 3438, 5415, 10 <!--
         {"data" : {
         "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
         }, 
-        "options": { "responsive": true}
+        "options": { "responsive": true, "scales": { "xAxes": [{ "ticks": { "autoSkip": false}}]  }}
+        
+        }
+        --></canvas></div>
+                 
+                
+                
+                </section>
+
+                <section> <h3>Descriptive Statistics - User</h3> 
+
+                <ul>
+                <li>Operating System</li>
+                <li>Browser</li> </ul>
+                
+                
+                
+                </section>
+
+
+                <section> 
+                <h4 class="fragment fade-out">Descriptive Statistics - Operating System</h4>
+          <div> <canvas class="fragment grow" data-chart="bar">
+      Operating System, Android, Chrome_OS, Linux, Macintosh, Windows, iOS, other 
+       Total Visits, 123892, 26337, 35034, 253938, 350072, 107665, 6715 
+       Purchases, 467, 994, 782, 6426, 2309, 536, 1  <!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
+        }, 
+        "options": { "responsive": true, "scales": { "xAxes": [{ "ticks": { "autoSkip": false}}]  }}
+        
         }
         -->
 
 
                                                  </canvas></div>
                  
+                
+                
+                </section>
+
+                <section> 
+                <h4 class="fragment fade-out">Descriptive Statistics - Browser</h4>
+          <div> <canvas class="fragment grow" data-chart="bar">
+      Operating System, Chrome, Edge, Firefox, Internet_Explorer,Safari, Safari_inapp, other  
+       Total Visits,620364, 10205, 37069, 19375, 182245, 6850, 27545  
+       Purchases, 10353, 58, 191, 109, 780, 12, 12  <!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : "#0000FF"}, {"backgroundColor" :"#ED872D"}]
+        }, 
+        "options": { "responsive": true, "scales": { "xAxes": [{ "ticks": { "autoSkip": false}}]  }}
+        
+        }
+        -->
+
+
+                                                 </canvas></div>
+                 
+                
+                
+                </section>
+
+                <section>Regression Results </section>
+
+                <section><h3>Location</h3> 
                 
                 
                 </section>
