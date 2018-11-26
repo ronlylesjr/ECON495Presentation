@@ -227,10 +227,115 @@
 
                 <section>Regression Results </section>
 
-                <section><h3>Location</h3> 
-                
-                
-                </section>
+                <section>
+                <h3>Location - Marginal Effects</h3> 
+
+        <small><font size=5>
+        <table class="fragment fade-in" data-fragment-index="0">
+        <tr><td></td><td>dy/dx</td><td>std_err</td><td>z</td><td>P>|z|</td></tr>
+        <tr class="fragment highlight-yellow" data-fragment-index="0"><td>Australasia**</td><td>0.0091</td><td>0.004</td><td>2.193</td><td>0.028</td></tr>
+        <tr><td>Caribbean***</td><td>0.0335</td><td>0.004</td><td>8.325</td><td>0.000</td></tr>
+        <tr><td>Central_America***</td><td>0.0163</td><td>0.004</td><td>4.630</td><td>0.000</td></tr>
+        <tr><td>Eastern_Asia***</td><td>0.0128</td><td>0.003</td><td>4.246</td><td>0.000</td></tr>
+        <tr class="fragment highlight-red" data-fragment-index="0"><td>Eastern_Europe</td><td>-0.0046</td><td>0.004</td><td>-1.112</td><td>0.266</td></tr>
+        <tr><td>Northern_America***</td><td>0.0518</td><td>0.003</td><td>20.120</td><td>0.000</td></tr>
+        <tr class="fragment highlight-red" data-fragment-index="0"><td>Northern_Europe</td><td>0.0004</td><td>0.003</td><td>0.113</td><td>0.910</td></tr>
+        <tr><td>South_America***</td><td>0.0205</td><td>0.003</td><td>7.248</td><td>0.000</td></tr>
+        <tr class="fragment highlight-red" data-fragment-index="0"><td>Southeast_Asia</td><td>-0.0011</td><td>0.003</td><td>-0.331</td><td>0.741</td></tr>
+        <tr class="fragment highlight-yellow" data-fragment-index="0"><td>Southern_Asia**</td><td>-0.0110</td><td>0.005</td><td>-2.433</td><td>0.015</td></tr>
+        <tr class="fragment highlight-red" data-fragment-index="0"><td>Western_Asia</td><td>0.0024</td><td>0.004</td><td>0.651</td><td>0.515</td></tr>
+        <tr class="fragment highlight-red" data-fragment-index="0"><td>Western_Europe</td><td>0.0015</td><td>0.003</td><td>0.442</td><td>0.659</td></tr>
+            <tr> <td><i>Pseudo R-Squared: 0.1317</i></td></tr></table>
+            </small></font>
+                    
+                    </section>
+    <section> 
+            <h3>Source - Marginal Effects</h3>
+            <small> <font size=4>
+            
+            <table class="fragment fade-in">
+            <tr><td></td><td>dy/dx</td><td>std_err</td><td>z</td><td>P>|z|</td><td></td></tr>
+        <tr><td>direct***</td><td>0.0294</td><td>0.001</td><td>20.851</td><td>0.000</td></tr>
+        <tr><td>bing***</td><td>0.0289</td><td>0.003</td><td>9.567</td><td>0.000</td><td></td></tr>
+        <tr><td>dealspotrcom***</td><td>0.0506</td><td>0.002</td><td>20.528</td><td>0.000</td><td></td></tr>
+        <tr><td>dfa***</td><td>0.0346</td><td>0.002</td><td>19.386</td><td>0.000</td><td></td></tr>
+        <tr><td>facebookcom***</td><td>0.0233</td><td>0.003</td><td>7.582</td><td>0.000</td><td></td></tr>
+        <tr><td>gdealsgoogleplexcom***</td><td>0.0315</td><td>0.003</td><td>9.785</td><td>0.000</td></tr>
+        <tr><td>google***</td><td>0.0246</td><td>0.001</td><td>17.683</td><td>0.000</td></tr>
+        <tr><td>groupsgooglecom***</td><td>0.0413</td><td>0.002</td><td>16.798</td><td>0.000</td></tr>
+        <tr><td>lfacebookcom***</td><td>0.0311</td><td>0.004</td><td>8.424</td><td>0.000</td><td></td></tr>
+        <tr><td>mailgooglecom***</td><td>0.0431</td><td>0.002</td><td>20.315</td><td>0.000</td></tr>
+        <tr><td>mallgoogleplexcom***</td><td>0.0508</td><td>0.001</td><td>35.362</td><td>0.000</td></tr>
+        <tr><td>sitesgooglecom***</td><td>0.0292</td><td>0.002</td><td>12.435</td><td>0.000</td></tr>
+        <tr><td>yahoo***</td><td>0.0299</td><td>0.003</td><td>10.070</td><td>0.000</td></tr>
+        <tr><td>youtubecom***</td><td>-0.0395</td><td>0.004</td><td>-10.014</td><td>0.000</td></tr>
+        <tr><td><i>Pseudo R-Squared: 0.1381</i></td></tr>
+        </table>
+
+        
+        
+        </small></font>
+        
+        
+        
+        
+        
+        
+        
+        </section>
+        <section>
+        	<h3>Medium - Marginal Effects</h3>
+        	<small>
+        		<table class="fragment fade-in">
+<tr><td></td><td>dy/dx</td><td>std_err</td><td>z</td><td>P>|z|</td><td></td></tr>
+<tr><td>none***</td><td>0.0399</td><td>0.004</td><td>9.970</td><td>0.000</td></tr>
+<tr><td>cpc***</td><td>0.0432</td><td>0.004</td><td>10.698</td><td>0.000</td></tr>
+<tr><td>cpm***</td><td>0.0458</td><td>0.004</td><td>11.076</td><td>0.000</td></tr>
+<tr><td>organic***</td><td>0.0340</td><td>0.004</td><td>8.526</td><td>0.000</td></tr>
+<tr><td>referral***</td><td>0.0416</td><td>0.004</td><td>10.417</td><td>0.000</td></tr>
+<tr><td><i>Pseudo R-Squared: 0.01016</i></td></tr></table>
+
+
+        	</small>
+
+        </section>
+
+
+        <section>
+        	<h3>Operating System - Marginal Effects</h3>
+        	<small>
+        		<table class="fragment fade-in">
+<tr><td></td><td>dy/dx</td><td>std_err</td><td>z</td><td>P>|z|</td><td></td></tr>
+<tr><td>Android***</td><td>0.0404</td><td>0.012</td><td>3.230</td><td>0.001</td></tr>
+<tr><td>Chrome_OS***</td><td>0.0696</td><td>0.013</td><td>5.563</td><td>0.000</td></tr>
+<tr><td>Linux***</td><td>0.0628</td><td>0.013</td><td>5.024</td><td>0.000</td></tr>
+<tr><td>Macintosh***</td><td>0.0644</td><td>0.012</td><td>5.155</td><td>0.000</td></tr>
+<tr><td>Windows***</td><td>0.0474</td><td>0.012</td><td>3.794</td><td>0.000</td></tr>
+<tr><td>iOS***</td><td>0.0439</td><td>0.012</td><td>3.509</td><td>0.000</td></tr>
+<tr><td><i>Pseudo R-Squared: 0.05471</i></td></tr>
+</table>
+
+
+        	</small>
+        </section>
+
+        <section>
+        	<h3>Browser - Marginal Effects</h3>
+        	<small>
+        		<table class="fragment fade-in">
+<tr><td></td><td>dy/dx</td><td>std_err</td><td>z</td><td>P>|z|</td><td></td></tr>
+<tr><td>Chrome***</td><td>0.0459</td><td>0.004</td><td>12.593</td><td>0.000</td></tr>
+<tr><td>Edge***</td><td>0.0323</td><td>0.004</td><td>8.088</td><td>0.000</td></tr>
+<tr><td>Firefox***</td><td>0.0311</td><td>0.004</td><td>8.290</td><td>0.000</td></tr>
+<tr><td>Internet_Explorer***</td><td>0.0322</td><td>0.004</td><td>8.400</td><td>0.000</td></tr>
+<tr><td>Safari***</td><td>0.0287</td><td>0.004</td><td>7.846</td><td>0.000</td></tr>
+<tr><td>Safari_inapp***</td><td>0.0175</td><td>0.005</td><td>3.408</td><td>0.001</td></tr>
+<tr><td><i>Psuedo R-Squared: 0.02569</i></td></tr>
+</table>
+
+        	</small>
+
+        </section>
 
 
 
