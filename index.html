@@ -25,8 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-                <h3>Calculating the Probablility of an Online Sale Using the
-                Logit Model</h3>  
+                <h3>Examining the Factors that Impact the Likelihood of an Online Sale</h3>  
                 <small>Ron Lyles Jr
                 <br />ECON 495
                 <br />Fall 2018
@@ -35,11 +34,17 @@
                 
                 
                 </section>
-                <section data-background="imgs/gstore.png"></section>
+                <section data-background="imgs/gstore.png"><h4 class="fragment fade-in" style="text-shadow: 2px 2px black;"><font color="#33b5e5"> https://shop.googlemerchandisestore.com/</font></h4>
+                	<div class="fragment fade-in"><p><span>.</span></p>
+                	<p><span>.</span></p>
+                	<p><span>.</span></p>
+                	<p>.</p>
+                	<p>.</p></div>
+                </section>
 				<section><h3>Overview:</h3>
                 <ul>
 
-                <li>Log of web traffic to Google's Merch store</li>
+                <li>Log of web traffic to Google's Merchandise store</li>
                 <li>September 2016 - January 2017</li>
                 <li>903,653 observations</li>
                 <li>Goal: Find impact of different factors on likelihood of making a purchase</li>
@@ -47,6 +52,7 @@
                 </ul>               
                 
                 </section>
+                <section>
                 <section><h3>Prior Work</h3>
                 <ul> 
                 
@@ -67,8 +73,12 @@
                 Research</li></ul>
                 </li>
                 </ul>
-                
+
                 </section>
+                                <section data-transition="zoom" data-background="imgs/hannah1.png">
+                          </section>
+                </section>
+               
                 <section><h3>Models</h3>
                 <ul>
                 <li>Logit model for each factor</li>
@@ -92,12 +102,12 @@
                 <li><a
                 href="https://pdfs.semanticscholar.org/15f3/7ff89f68747a3f4cb34cb6097ba79b201f92.pdf">"A
                 Simulation Study of the Number of Events per Variable in
-                Logistic Regression Analysis" 
-                Pedduzi et. all (1996)</a></li>
+                Logistic Regression Analysis" </a>
+                <ul><li>Pedduzi et. all (1996)</li></ul></li>
                 <li><a
                 href="https://academic.oup.com/aje/article/165/6/710/63906">"Relaxing
                 the Rule of Ten Events per Variable in Logistic and Cox
-                Regression" Vittinghoff and McCulloch (2007)</a></li>
+                Regression"</a> <ul><li>Vittinghoff and McCulloch (2007)</li></ul></li>
                 
                 </ul>
                 
@@ -105,6 +115,7 @@
                 
                 
                 </section>
+                <section>
                 <section>
                 <h4 class="fragment fade-out">Descriptive Statistics - Location</h4>
 
@@ -123,6 +134,22 @@
                 
                 
                 </section>
+                <section>
+                	<div> <canvas class="fragment grow" data-chart="doughnut">
+        SubContinent,Australasia, Caribbean, Central_America, Eastern_Asia, Eastern_Europe, Northern_America, Northern_Europe, South_America, Southeast_Asia, Southern_Asia, Western_Asia, Western_Europe, other
+       Total Visits,1.6481, 0.2663, 1.7244, 5.1921, 5.0073, 43.2309, 6.437, 4.618, 8.6095, 6.5646, 4.2542, 6.5417, 5.9059 
+       Purchases, 0.1216, 0.1389, 0.2258, 0.5124, 0.1216, 96.7694, 0.2345, 0.8511, 0.2779, 0.0955, 0.1824, 0.2605, 0.2084
+		<!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC", "#71DD7F", "#00DFFC", "#FF42D2", "#451082", "#F7BBD5", "#085A77", "#A33025", "#37CCB5", "#1717EA"]}, {"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC",  "#71DD7F", "#00DFFC", "#FF42D2", "#451082", "#F7BBD5", "#085A77", "#A33025", "#37CCB5", "#1717EA"]}]
+        }
+        }
+        -->
+
+                                                 </canvas></div>
+
+                </section>
+            </section>
                 <section> <h3>Descriptive Statistics - Marketing</h3> 
                 <ul>
                 
@@ -133,7 +160,8 @@
                 
                 </section>
 
-
+<!-- GET COLORS FROM PALLETTE PICKER-->
+               <section>
                 <section> 
                 <h4 class="fragment fade-out">Descriptive Statistics - Source</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
@@ -153,8 +181,25 @@
                 
                 
                 </section>
+                <section>
+                	
+                	<div> <canvas class="fragment grow" data-chart="doughnut">
+        Source, direct, bing, dealspotrcom, dfa, facebookcom, gdealsgoogleplexcom, google, groupsgooglecom, lfacebookcom, mailgooglecom, mallgoogleplexcom, sitesgooglecom, yahoo, youtubecom, other 
+       Total Visits, 15.8278, 0.1693, 0.0584, 0.6292, 0.2541, 0.1176, 44.352, 0.1134, 0.088, 0.1612, 7.3497, 0.3301, 0.1638, 23.527, 6.8584 
+       Purchases, 17.7334, 0.1824, 0.3474, 1.0682, 0.1737, 0.1563, 33.6865, 0.33, 0.1129, 0.5384, 44.3161, 0.3647, 0.1911, 0.0955, 0.7034
+		<!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC", "#71DD7F", "#00DFFC", "#FF42D2", "#451082", "#F7BBD5", "#085A77", "#A33025", "#37CCB5", "#1717EA", "#FCEDBF", "#7C50D3"]}, {"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC",  "#71DD7F", "#00DFFC", "#FF42D2", "#451082", "#F7BBD5", "#085A77", "#A33025", "#37CCB5", "#1717EA", "#FCEDBF", "#7C50D3"]}]
+        }
+        }
+        -->
 
-                <section> 
+                                                 </canvas></div>
+
+                </section>
+            </section>
+
+                <section><section> 
                 <h4 class="fragment fade-out">Descriptive Statistics - Medium</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
         Medium, none, cpc, cpm, organic, referral, other
@@ -171,6 +216,23 @@
                 
                 
                 </section>
+                <section>
+                	<div> <canvas class="fragment grow" data-chart="doughnut">
+        Medium, none, cpc, cpm, organic, referral, other
+       Total Visits, 15.8275, 2.8026, 0.693, 42.2243, 36.6241, 1.8285 
+       Purchases, 17.7334, 4.0643, 1.2332, 29.8567, 47.0256, 0.0868
+		<!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC", "#71DD7F", "#00DFFC"]}, {"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC",  "#71DD7F", "#00DFFC"]}]
+        }
+        }
+        -->
+
+                                                 </canvas></div>
+
+
+                </section>
+            </section>
 
                 <section> <h3>Descriptive Statistics - User</h3> 
 
@@ -183,7 +245,8 @@
                 </section>
 
 
-                <section> 
+                <section>
+                	<section> 
                 <h4 class="fragment fade-out">Descriptive Statistics - Operating System</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
       Operating System, Android, Chrome_OS, Linux, Macintosh, Windows, iOS, other 
@@ -198,16 +261,32 @@
         -->
 
 
-                                                 </canvas></div>
+                                                 </canvas></div></section>
                  
                 
-                
-                </section>
+                <section>
+                	
+                	<div> <canvas class="fragment grow" data-chart="doughnut">
+        Operating System, Android, Chrome_OS, Linux, Macintosh, Windows, iOS, other
+       Total Visits, 13.7101, 2.9145, 3.8769, 28.1013, 38.7396, 11.9144, 0.7431 
+       Purchases, 4.0556, 8.6322, 6.7911, 55.8055, 20.0521, 4.6548, 0.0087
+		<!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : ["#343838","#005F6B","#008C9E","#7C50D3","#71DD7F","#00DFFC","#FF42D2"]}, {"backgroundColor" : ["#343838","#005F6B","#008C9E","#7C50D3","#71DD7F","#00DFFC","#FF42D2"]}]
+        }
+        }
+        -->
 
-                <section> 
+                                                 </canvas></div>
+
+                
+                </section></section>
+
+                <section>
+                	<section> 
                 <h4 class="fragment fade-out">Descriptive Statistics - Browser</h4>
           <div> <canvas class="fragment grow" data-chart="bar">
-      Operating System, Chrome, Edge, Firefox, Internet_Explorer,Safari, Safari_inapp, other  
+      Browser, Chrome, Edge, Firefox, Internet_Explorer, Safari, Safari_inapp, other  
        Total Visits,620364, 10205, 37069, 19375, 182245, 6850, 27545  
        Purchases, 10353, 58, 191, 109, 780, 12, 12  <!--
         {"data" : {
@@ -225,7 +304,25 @@
                 
                 </section>
 
-                <section>Regression Results </section>
+                <section>
+                	<div> <canvas class="fragment grow" data-chart="doughnut">
+        Browser, Chrome, Edge, Firefox, Internet_Explorer, Safari, Safari_inapp, other  
+       Total Visits, 68.6507, 1.1293, 4.1021, 2.1441, 20.1676, 0.758, 3.0482  
+       Purchases, 89.9088, 0.5037, 1.6587, 0.9466, 6.7738, 0.1042, 0.1042
+		<!--
+        {"data" : {
+        "datasets" : [{"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC", "#71DD7F", "#00DFFC", "#FF42D2"]}, {"backgroundColor" : ["#343838","#005F6B","#008C9E", "#00B4CC",  "#71DD7F", "#00DFFC", "#FF42D2"]}]
+        }
+        }
+        -->
+
+                                                 </canvas></div>
+
+
+                </section>
+            </section>
+
+                <section><h2>Regression Results</h2> </section>
 
                 <section>
                 <h3>Location - Marginal Effects</h3> 
@@ -245,7 +342,7 @@
         <tr class="fragment highlight-yellow" data-fragment-index="0"><td>Southern_Asia**</td><td>-0.0110</td><td>0.005</td><td>-2.433</td><td>0.015</td></tr>
         <tr class="fragment highlight-red" data-fragment-index="0"><td>Western_Asia</td><td>0.0024</td><td>0.004</td><td>0.651</td><td>0.515</td></tr>
         <tr class="fragment highlight-red" data-fragment-index="0"><td>Western_Europe</td><td>0.0015</td><td>0.003</td><td>0.442</td><td>0.659</td></tr>
-            <tr> <td><i>Pseudo R-Squared: 0.1317</i></td></tr></table>
+            <tr> <td><i>Pseudo R-Squared: 0.1317</i></td><td><i>Log-Likelihood: -53556</i></td><td><i>LL-Null:-61679</i></td><td><i>LLR p-value:0.000</i></td></tr></table>
             </small></font>
                     
                     </section>
@@ -269,7 +366,8 @@
         <tr><td>sitesgooglecom***</td><td>0.0292</td><td>0.002</td><td>12.435</td><td>0.000</td></tr>
         <tr><td>yahoo***</td><td>0.0299</td><td>0.003</td><td>10.070</td><td>0.000</td></tr>
         <tr><td>youtubecom***</td><td>-0.0395</td><td>0.004</td><td>-10.014</td><td>0.000</td></tr>
-        <tr><td><i>Pseudo R-Squared: 0.1381</i></td></tr>
+        <tr><td><i>Pseudo R-Squared: 0.1381</i></td><td><i>Log-Likelihood: -53162</i></td><td><i>LL-Null: -61679</i></td><td><i>LLR p-value: 0.000</i>
+</td></tr>
         </table>
 
         
@@ -293,7 +391,7 @@
 <tr><td>cpm***</td><td>0.0458</td><td>0.004</td><td>11.076</td><td>0.000</td></tr>
 <tr><td>organic***</td><td>0.0340</td><td>0.004</td><td>8.526</td><td>0.000</td></tr>
 <tr><td>referral***</td><td>0.0416</td><td>0.004</td><td>10.417</td><td>0.000</td></tr>
-<tr><td><i>Pseudo R-Squared: 0.01016</i></td></tr></table>
+<tr><td><i>Pseudo R-Squared: 0.01016</i></td><td><i>Log-Likelihood: -61052</i></td><td><i>LL-Null: -61679</i></td><td><i>LLR p-value: 8.622e-269</i></td></i></tr></table>
 
 
         	</small>
@@ -312,7 +410,7 @@
 <tr><td>Macintosh***</td><td>0.0644</td><td>0.012</td><td>5.155</td><td>0.000</td></tr>
 <tr><td>Windows***</td><td>0.0474</td><td>0.012</td><td>3.794</td><td>0.000</td></tr>
 <tr><td>iOS***</td><td>0.0439</td><td>0.012</td><td>3.509</td><td>0.000</td></tr>
-<tr><td><i>Pseudo R-Squared: 0.05471</i></td></tr>
+<tr><td><i>Pseudo R-Squared: 0.05471</i></td><td><i>Log-Likelihood: -58304</i></td><td><i>LL-Null: -61679</i></td><td><i>LLR p-value: 0.000</i></td></tr>
 </table>
 
 
@@ -330,7 +428,7 @@
 <tr><td>Internet_Explorer***</td><td>0.0322</td><td>0.004</td><td>8.400</td><td>0.000</td></tr>
 <tr><td>Safari***</td><td>0.0287</td><td>0.004</td><td>7.846</td><td>0.000</td></tr>
 <tr><td>Safari_inapp***</td><td>0.0175</td><td>0.005</td><td>3.408</td><td>0.001</td></tr>
-<tr><td><i>Psuedo R-Squared: 0.02569</i></td></tr>
+<tr><td><i>Psuedo R-Squared: 0.02569</i></td><td><i>Log-Likelihood: -60094</i></td><td><i>LL-Null: -61679</i></td><td><i>LLR p-value: 0.000</i></td></tr>
 </table>
 
         	</small>
@@ -383,6 +481,7 @@
 			
             
             );
+            Reveal.configure({pdfSeparateFragments: false});
 		</script>
 	</body>
 </html>
