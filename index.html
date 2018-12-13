@@ -106,7 +106,7 @@
                 <li>User</li>
                 </ul>
                 </li>
-                <li>Only signs from coefficients can be interpreted</li>
+                <li>Marginal effects will be reported</li>
                 
                 
                 </ul>
@@ -305,27 +305,32 @@
                 </section>
             </section>
 
-                <section><h2>Regression Results</h2> </section>
+                <section><h2>Marginal Effects</h2> 
+                	<h5><small>(Standard errors in parentheses)</small></h5>
+                </section>
 
                 <section>
                 <h3>Location</h3> 
 
         <small><font size=5>
-        <table>
-<tr><td></td><td>coef</td><td>std_err</td><td>z</td><td>P>|z|</td></tr>
+       <table>
+<tr><td>Australasia</td><td>0.000 (0.001)</td></tr>
 
-<tr><td>Australasia</td><td>0.0724</td><td>0.104</td><td>0.697</td><td>0.486</td></tr>
-<tr><td>Caribbean***</td><td>0.9011</td><td>0.114</td><td>7.909</td><td>0.000</td></tr>
-<tr><td>Central_America***</td><td>0.4890</td><td>0.091</td><td>5.360</td><td>0.000</td></tr>
-<tr><td>Eastern_Asia***</td><td>0.2498</td><td>0.074</td><td>3.361</td><td>0.001</td></tr>
-<tr><td>Eastern_Europe</td><td>-0.0681</td><td>0.100</td><td>-0.683</td><td>0.495</td></tr>
-<tr  class="fragment grow" data-fragment-index="1"><td>Northern_America***</td><td>1.1313</td><td>0.061</td><td>18.494</td><td>0.000</td></tr>
-<tr><td>Northern_Europe*</td><td>-0.1507</td><td>0.084</td><td>-1.804</td><td>0.071</td></tr>
-<tr><td>South_America***</td><td>0.6180</td><td>0.071</td><td>8.758</td><td>0.000</td></tr>
-<tr><td>Southeast_Asia</td><td>0.1226</td><td>0.082</td><td>1.492</td><td>0.136</td></tr>
-<tr><td>Southern_Asia**</td><td>-0.2650</td><td>0.106</td><td>-2.506</td><td>0.012</td></tr>
-<tr><td>Western_Asia***</td><td>0.2434</td><td>0.092</td><td>2.641</td><td>0.008</td></tr>
-<tr><td>Western_Europe</td><td>-0.0822</td><td>0.082</td><td>-1.003</td><td>0.316</td></tr>
+<tr class="fragment grow"><td>Caribbean</td><td>0.016<sup>***</sup> (0.005)</td></tr>
+
+<tr><td>Central_America</td><td>0.004<sup>***</sup> (0.002)</td></tr>
+
+<tr><td>Eastern_Asia</td><td>0.002<sup>**</sup> (0.001)</td></tr>
+
+<tr><td>Eastern_Europe</td><td>0.000 (0.000)</td></tr>
+<tr><td>Northern_America</td><td>0.007<sup>***</sup> (0.001)</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>Northern_Europe</td><td>0.000<sup>*</sup> (0.000)</td></tr>
+<tr><td>South_America</td><td>0.006<sup>***</sup> (0.002)</td></tr>
+<tr><td>Southeast_Asia</td><td>0.001 (0.000)</td></tr>
+<tr><td>Southern_Asia</td><td>-0.001<sup>***</sup> (0.000)</td></tr>
+<tr><td>Western_Asia</td><td>0.001<sup>*</sup> (0.001)</td></tr>
+<tr><td>Western_Europe</td><td>0.000 (0.000)</td> </tr>
 </table>
 
             </small></font>
@@ -336,21 +341,20 @@
             <small> <font size=4>
             
             <table>
-<tr><td></td><td>coef</td><td>std_err</td><td>z</td><td>P>|z|</td></tr>
-<tr><td>direct***</td><td>0.7217</td><td>0.038</td><td>18.860</td><td>0.000</td></tr>
-<tr><td>bing***</td><td>0.7191</td><td>0.101</td><td>7.144</td><td>0.000</td></tr>
-<tr><td>dealspotrcom***</td><td>1.2698</td><td>0.091</td><td>13.957</td><td>0.000</td></tr>
-<tr><td>dfa***</td><td>0.6460</td><td>0.053</td><td>12.162</td><td>0.000</td></tr>
-<tr><td>facebookcom***</td><td>0.6091</td><td>0.096</td><td>6.350</td><td>0.000</td></tr>
-<tr><td>gdealsgoogleplexcom***</td><td>0.4083</td><td>0.102</td><td>4.004</td><td>0.000</td></tr>
-<tr><td>google***</td><td>0.6412</td><td>0.038</td><td>17.012</td><td>0.000</td></tr>
-<tr><td>groupsgooglecom***</td><td>0.8568</td><td>0.083</td><td>10.376</td><td>0.000</td></tr>
-<tr><td>lfacebookcom***</td><td>0.7163</td><td>0.119</td><td>6.001</td><td>0.000</td></tr>
-<tr><td>mailgooglecom***</td><td>1.0292</td><td>0.072</td><td>14.380</td><td>0.000</td></tr>
-<tr class='fragment grow'><td>mallgoogleplexcom***</td><td>1.1563</td><td>0.038</td><td>30.332</td><td>0.000</td></tr>
-<tr><td>sitesgooglecom***</td><td>0.3869</td><td>0.072</td><td>5.405</td><td>0.000</td></tr>
-<tr><td>yahoo***</td><td>0.7708</td><td>0.098</td><td>7.898</td><td>0.000</td></tr>
-<tr class="fragment grow"><td>youtubecom***</td><td>-0.6859</td><td>0.090</td><td>-7.618</td><td>0.000</td></tr>
+<tr><td>direct</td><td>0.005<sup>***</sup> (0.001)</td></tr>
+<tr><td>bing</td><td>0.007<sup>***</sup> (0.002)</td></tr>
+<tr class="fragment grow"><td>dealspotrcom</td><td>0.026<sup>***</sup> (0.005)</td></tr>
+<tr><td>dfa</td><td>0.006<sup>***</sup> (0.001)</td></tr>
+<tr><td>facebookcom</td><td>0.005<sup>***</sup> (0.002)</td></tr>
+<tr><td>gdealsgoogleplexcom</td><td>0.003<sup>***</sup> (0.001)</td></tr>
+<tr><td>google</td><td>0.003<sup>***</sup> (0.000)</td></tr>
+<tr><td>groupsgooglecom</td><td>0.010<sup>***</sup> (0.002)</td></tr>
+<tr><td>lfacebookcom</td><td>0.006<sup>***</sup> (0.002)</td></tr>
+<tr><td>mailgooglecom</td><td>0.015<sup>***</sup> (0.003)</td></tr>
+<tr><td>mallgoogleplexcom</td><td>0.016<sup>***</sup> (0.002)</td></tr>
+<tr><td>sitesgooglecom</td><td>0.003<sup>***</sup> (0.001)</td></tr>
+<tr><td>yahoo</td><td>0.008<sup>***</sup> (0.002)</td></tr>
+<tr class="fragment grow"><td>youtubecom</td><td>-0.002<sup>***</sup> (0.000)</td></tr>
 </table>
 
 
@@ -372,13 +376,12 @@
         	<h3>Operating System</h3>
         	<small>
         		<table>
-<tr><td></td><td>coef</td><td>std_err</td><td>z</td><td>P>|z|</td></tr>
-<tr><td>Android</td><td>0.3147</td><td>0.319</td><td>0.988</td><td>0.323</td></tr>
-<tr><td>Chrome_OS***</td><td>0.8382</td><td>0.318</td><td>2.632</td><td>0.008</td></tr>
-<tr><td>Linux*</td><td>0.5300</td><td>0.319</td><td>1.664</td><td>0.096</td></tr>
-<tr><td>Macintosh***</td><td>0.8379</td><td>0.318</td><td>2.633</td><td>0.008</td></tr>
-<tr><td>Windows**</td><td>0.6938</td><td>0.318</td><td>2.180</td><td>0.029</td></tr>
-<tr><td>iOS</td><td>0.3908</td><td>0.318</td><td>1.227</td><td>0.220</td></tr>
+<tr><td>Android</td><td>0.002 (0.003)</td></tr>
+<tr><td>Chrome_OS</td><td>0.010 (0.011)</td></tr>
+<tr><td>Linux</td><td>0.005 (0.006)</td></tr>
+<tr><td>Macintosh</td><td>0.006 (0.005)</td></tr>
+<tr><td>Windows</td><td>0.004 (0.003)</td></tr>
+<tr><td>iOS</td><td>0.002 (0.003)</td></tr>
 </table>
 
 
@@ -390,12 +393,12 @@
         	<h3>Browser</h3>
         	<small>
         		<table>
-<tr><td></td><td>coef</td><td>std_err</td><td>z</td><td>P>|z|</td></tr>
-<tr><td>Chrome***</td><td>0.3417</td><td>0.070</td><td>4.866</td><td>0.000</td></tr>
-<tr><td>Edge***</td><td>0.2627</td><td>0.089</td><td>2.954</td><td>0.003</td></tr>
-<tr><td>Firefox***</td><td>0.2473</td><td>0.076</td><td>3.253</td><td>0.001</td></tr>
-<tr><td>Internet_Explorer***</td><td>0.2433</td><td>0.080</td><td>3.034</td><td>0.002</td></tr>
-<tr><td>Safari***</td><td>0.2265</td><td>0.071</td><td>3.201</td><td>0.001</td></tr>
+<tr><td>Chrome</td><td>0.001<sup>***</sup> (0.000)</td></tr>
+<tr><td>Edge</td><td>0.001<sup>*</sup> (0.001)</td></tr>
+<tr><td>Firefox</td><td>0.001<sup>*</sup> (0.001)</td></tr>
+<tr><td>Internet_Explorer</td><td>0.001<sup>*</sup> (0.001)</td></tr>
+<tr><td>Safari</td><td>0.001<sup>*</sup> (0.001)</td></tr>
+<tr><td>Safari_inapp</td><td>0.000 (0.001)</td></tr>
 </table>
 
 
@@ -405,9 +408,9 @@
         <section>
         	<h3>Overall</h3>
         	<small><table>
-        	<tr><td>Intercept</td><td>-4.8032</td><td>0.329</td><td>-14.604</td><td>0.000</td></tr>
-        	<tr><td>Pseudo R-Squared: </td><td></td><td></td><td></td><td>0.2084</td></tr>
-        	<tr><td>Log-Likelihood: </td><td></td><td></td><td></td><td>-48823</td></tr>
+        	<tr><td>Constant</td><td></td><td></td><td></td><td>-0.014<sup>***</sup></td></tr>
+        	<tr><td>Pseudo R-Squared: </td><td></td><td></td><td></td><td>0.2079</td></tr>
+        	<tr><td>Log-Likelihood: </td><td></td><td></td><td></td><td>-48858.010</td></tr>
         	<tr><td>LL-Null: </td><td></td><td></td><td></td><td>-61679</td></tr>
         	<tr><td>LLR p-value: </td><td></td><td></td><td></td><td>0.000</td></tr>
         </table></small>
@@ -415,10 +418,11 @@
         <section>
         	<h3>Conclusions</h3>
         	<ul>
-        		<li>North American visitors in the sample were more likely to make a purchase
-        			<ul><li>Otherwise, location results marginally significant</li></ul></li>
+        		<li>Caribbean visitors in the sample were most likely to make a purchase
+        			<ul>
+        				<li>Otherwise, location results marginally significant</li></ul></li>
         		<li>People who visited from Google campus more likely to purchase</li>
-        		<li>Visitors from youtube less likely to make a purchase</li>
+        		<li>Visitors from youtube less likely to make a purchase; visitors from dealspotr.com most likely</li>
         		<li>People in Google's ecosystem (Chrome OS, Chrome browser) more likely to purchase</li>
         	</ul>
 
